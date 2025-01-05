@@ -1,0 +1,42 @@
+body {
+    background-color:gray; /* Dark theme like YouTube */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Flexbox layout for centering */
+    align-items:start; /* Vertical centering */
+    justify-content:left; /* Horizontal centering */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling */
+  }
+section{
+    margin-top: 50px;
+    margin-left: 50px; 
+}
+  iframe {
+    
+    background-color: black; /* Match the iframe with the page's background */
+    border: none; /* Remove the default iframe border */
+  }
+ canvas{
+    position:relative;
+  }
+
+  #next-page-button {
+    margin-top: 20px; /* Adds space between the video and the button */
+    padding: 15px 25px; /* Controls the size of the round button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 50%; /* Makes the button round */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100px; /* Width of the button */
+    height: 100px; /* Height of the button */
+    display: flex; /* Centers the text inside the button */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center;
+  }
+  
+  
+  
+  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnemonic Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-red-300 flex items-center justify-center min-h-screen relative">
+    <div class="bg-gray-300 border-2 border-blue-500 p-6 w-11/12 md:w-2/3 lg:w-1/2">
+        <h1 class="text-center text-xl font-bold mb-4">2. The Solar System (Planets in Order) </h1>
+        <p class="text-center mb-4">Mnemonic to remember the order of planets from the Sun:
+            :</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Mercury</li>
+            <li>Venus</li>
+            <li>Earth</li>
+            <li>Mars  </li>
+            <li>Jupiter</li>
+            <li>Saturn</li>
+            <li>Uranus</li>
+            <li>Neptune</li> 
+        </ul>
+        <p class="text-center">Mnemonic: "My Very Educated Mother Just Served Us Nachos"</p>
+    </div>
+ <a href="../nemonics/p4.html">
+    <div class="absolute bottom-4 left-4">
+        <button class="bg-green-500 text-white p-2 rounded-full" onclick="previousQuestion()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+    </a>
+    <a href="../p5/p5.2.html">
+    <div class="absolute bottom-4 right-12">
+        <button class="bg-green-500 text-white p-2 rounded-full" onclick="nextQuestion()">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</a>
+    <div class="absolute bottom-4 right-20">
+        <button class="bg-gray-500 text-white p-2 rounded-full" onclick="speakText()">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <div class="absolute bottom-4 right-4">
+        <button class="bg-gray-500 text-white p-2 rounded-full" onclick="toggleWhiteNoise()">
+            <i class="fas fa-barcode"></i>
+        </button>
+    </div>
+
+    <audio id="whiteNoise" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles1.css"> <!-- Link to the external CSS file -->
+</head>
+
+<body class="bg-yellow-200">
+    <!-- Header Section -->
+    <div class="w-full">
+        <img src="https://media.istockphoto.com/photos/teacher-with-preschool-children-having-fun-picture-id473032114?k=6&m=473032114&s=170667a&w=0&h=RG0Y786q8ZF9okcHqy3m7LKXpoYoT0EeJg-JQx_PdW4=" alt="Children in a classroom, one child giving a high-five to a teacher" class="w-full">
+    </div>
+
+    <!-- Grid of Subjects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+        <!-- Math -->
+        <div class="flex flex-col items-center bg-gray-200 p-4 rounded shadow hover:bg-yellow-300 hover:shadow-lg transition-all">
+            <i class="fas fa-calculator fa-2x mb-2"></i>
+            <p class="text-xl font-semibold">MATHS</p>
+            <button class="btn" onclick="location.href='maths.html'">Go to Maths</button>
+        </div>
+
+        <!-- General Knowledge -->
+         <a href="../gk/gk1.html">
+        <div class="flex flex-col items-center bg-gray-200 p-4 rounded shadow hover:bg-yellow-300 hover:shadow-lg transition-all">
+            <i class="fas fa-globe fa-2x mb-2"></i>
+            <p class="text-xl font-semibold">GK</p>
+            <button class="btn" onclick="location.href='file:///C:/Users/admin/OneDrive/Desktop/face_detection/gk/gk1.html'">Go to GK</button>
+        </div>
+    </a>
+
+        <!-- English -->
+        <div class="flex flex-col items-center bg-gray-200 p-4 rounded shadow hover:bg-yellow-300 hover:shadow-lg transition-all">
+            <i class="fas fa-book fa-2x mb-2"></i>
+            <p class="text-xl font-semibold">ENGLISH</p>
+            <button class="btn" onclick="location.href='english.html'">Go to English</button>
+        </div>
+
+        <!-- Science -->
+        <div class="flex flex-col items-center bg-gray-200 p-4 rounded shadow hover:bg-yellow-300 hover:shadow-lg transition-all">
+            <i class="fas fa-flask fa-2x mb-2"></i>
+            <p class="text-xl font-semibold">SCIENCE</p>
+            <button class="btn" onclick="location.href='science.html'">Go to Science</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+        <p>&copy; 2025 Education for Everyone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+
+</html>

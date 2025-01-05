@@ -1,0 +1,140 @@
+/* Base Styles for the page */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.bg-blue-400 {
+    background-color: #24a133; /* Tailwind bg-blue-400 */
+}
+
+.bg-blue-300 {
+    background-color: #83b781; /* Tailwind bg-blue-300 */
+}
+
+.bg-gray-200 {
+    background-color: #E5E7EB; /* Tailwind bg-gray-200 */
+}
+
+.bg-gray-300 {
+    background-color: #D1D5DB; /* Tailwind bg-gray-300 */
+}
+
+.bg-gray-800 {
+    background-color: #1F2937; /* Tailwind bg-gray-800 */
+}
+
+.bg-green-500 {
+    background-color: #10B981; /* Tailwind bg-green-500 */
+}
+
+.bg-green-800 {
+    background-color: #047857; /* Tailwind bg-green-800 */
+}
+
+.text-white {
+    color: white; /* Tailwind text-white */
+}
+
+.text-black {
+    color: black; /* Tailwind text-black */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* Tailwind text-lg */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* Tailwind text-2xl */
+}
+
+.text-green-600 {
+    color: #16A34A; /* Tailwind text-green-600 */
+}
+
+.text-blue-600 {
+    color: #3B82F6; /* Tailwind text-blue-600 */
+}
+
+.text-yellow-600 {
+    color: #F59E0B; /* Tailwind text-yellow-600 */
+}
+
+.text-red-600 {
+    color: #EF4444; /* Tailwind text-red-600 */
+}
+
+.p-4 {
+    padding: 1rem; /* Tailwind p-4 */
+}
+
+.p-2 {
+    padding: 0.5rem; /* Tailwind p-2 */
+}
+
+.rounded-lg {
+    border-radius: 0.5rem; /* Tailwind rounded-lg */
+}
+
+.rounded-full {
+    border-radius: 9999px; /* Tailwind rounded-full */
+}
+
+.shadow-lg {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Tailwind shadow-lg */
+}
+
+.shadow-md {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind shadow-md */
+}
+
+.ml-4 {
+    margin-left: 1rem; /* Tailwind ml-4 */
+}
+
+.mt-4 {
+    margin-top: 1rem; /* Tailwind mt-4 */
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* Tailwind mb-4 */
+}
+
+.grid {
+    display: grid; /* Tailwind grid */
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr); /* Tailwind grid-cols-2 */
+}
+
+.gap-4 {
+    gap: 1rem; /* Tailwind gap-4 */
+}
+
+.w-full {
+    width: 100%; /* Tailwind w-full */
+}
+
+.max-w-3xl {
+    max-width: 48rem; /* Tailwind max-w-3xl */
+}
+
+.flex {
+    display: flex; /* Tailwind flex */
+}
+
+.items-center {
+    align-items: center; /* Tailwind items-center */
+}
+
+.justify-center {
+    justify-content: center; /* Tailwind justify-center */
+}
+
+.justify-between {
+    justify-content: space-between; /* Tailwind justify-between */
+}
+
+.justify-end {
+    justify-content: flex-end; /* Tailwind justify-end */
+}

@@ -1,0 +1,76 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .submenu {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-blue-500">
+    <div class="relative">
+        <!-- Top Section with Background Image and Text -->
+        <div class="relative">
+            <img alt="Background with various knowledge-related icons" class="w-full h-72 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/H3Abm7Z4yWIhGVwlM57bi9hkCWxlBgyV6Ii3JbaNYTURTdAF.jpg" width="1200"/>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <h1 class="text-6xl font-bold text-orange-500">KNOWLEDGE</h1>
+            </div>
+        </div>
+        <!-- Sidebar and Content Section -->
+        <div class="flex">
+            <!-- Sidebar -->
+            <div class="bg-teal-600 w-24 flex flex-col items-center justify-center py-8">
+                <div class="transform -rotate-90">
+                    <h2 class="text-white text-3xl font-bold">General</h2>
+                    <h2 class="text-white text-3xl font-bold">Knowledge</h2>
+                </div>
+                <div class="absolute top-4 left-4 bg-teal-400 rounded-full p-2">
+                    <a href="javascript:history.back()">
+                        <i class="fas fa-arrow-left text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="flex-1 bg-blue-500 p-4">
+                <div class="space-y-4">
+                    <div class="bg-orange-500 text-white p-4 cursor-pointer main-option">
+                        Geographical General Knowledge
+                    </div>
+                    <div class="submenu space-y-4">
+                        <a href="../Face-Detection-JavaScript-master/index.html">
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='http://127.0.0.1:5502/index.html">Continents,Countries And Solar System</div>
+                        </a>
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage2.html'">Layers of Earth</div>
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage3.html'">Layers of atmosphere</div>
+                    </div>
+                    <div class="bg-orange-500 text-white p-4 cursor-pointer main-option">
+                        Animals
+                    </div>
+                    <div class="submenu space-y-4">
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage4.html'">Water animals</div>
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage5.html'">Animal clues</div>
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage6.html'">Strange birds</div>
+                    </div>
+                    <div class="bg-orange-500 text-white p-4 cursor-pointer main-option">
+                        Plants
+                    </div>
+                    <div class="submenu space-y-4">
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage7.html'">Amazing plants</div>
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage8.html'">Eatable parts of plants</div>
+                        <div class="bg-white text-orange-500 p-4 cursor-pointer" onclick="window.location.href='nextpage9.html'">Plants Ecosystems</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.main-option').click(function() {
+                $(this).next('.submenu').slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

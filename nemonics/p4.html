@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mnemonic Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-red-300 flex items-center justify-center min-h-screen relative">
+    <div class="bg-gray-300 border-2 border-blue-500 p-6 w-11/12 md:w-2/3 lg:w-1/2">
+        <h1 class="text-center text-xl font-bold mb-4">1. Countries and Continents</h1>
+        <p class="text-center mb-4">Mnemonic to remember the continents:</p>
+        <ul class="list-disc list-inside mb-4">
+            <li>Antarctica</li>
+            <li>Africa</li>
+            <li>Asia</li>
+            <li>Europe</li>
+            <li>Australia</li>
+            <li>North America</li>
+            <li>South America</li>
+        </ul>
+        <p class="text-center">Mnemonic: "Aunt Alice Ate Every Orange Near Sunflowers"</p>
+    </div>
+    <a href="../Face-Detection-JavaScript-master/index.html">
+    <div class="absolute bottom-4 left-4">
+        <button class="bg-green-500 text-white p-2 rounded-full" onclick="previousQuestion()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+    </a>
+    <a href="../p4.1/p4.2.html">
+    <div class="absolute bottom-4 right-12">
+        <button class="bg-green-500 text-white p-2 rounded-full" onclick="nextQuestion()">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+    </a>
+    <div class="absolute bottom-4 right-20">
+        <button class="bg-gray-500 text-white p-2 rounded-full" onclick="speakText()">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+    <div class="absolute bottom-4 right-4">
+        <button class="bg-gray-500 text-white p-2 rounded-full" onclick="toggleWhiteNoise()">
+            <i class="fas fa-barcode"></i>
+        </button>
+    </div>
+
+    <audio id="whiteNoise" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function speakText() {
+            const text = "Mnemonic to remember the continents: Antarctica, Africa, Asia, Europe, Oceania, North America, South America. Mnemonic: Aunt Alice Ate Every Orange Near Sunflowers";
+            const speech = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(speech);
+        }
+
+        function toggleWhiteNoise() {
+            const whiteNoise = document.getElementById('whiteNoise');
+            if (whiteNoise.paused) {
+                whiteNoise.play();
+            } else {
+                whiteNoise.pause();
+            }
+        }
+        <video id="video" width="400" height="300" autoplay muted></video>
+        function previousQuestion() {
+            // Logic to navigate to the previous question
+            alert("Navigate to the previous question");
+        }
+
+        function nextQuestion() {
+            // Logic to navigate to the next question
+            alert("Navigate to the next question");
+        }
+    </script>
+</body>
+</html>

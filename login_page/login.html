@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Virtual Classroom - Login</title>
+    <link href="styles.css" rel="stylesheet"/> 
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm">
+            <h1>Login to Classroom</h1>
+            <div class="inputBox">
+                <label for="username">Email</label>
+                <input type="email" id="username" placeholder="Enter your email" required />
+            </div>
+            <div class="inputBox">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+            </div>
+            <div class="inputBox">
+                <button type="submit">Login</button>
+            </div>
+            <div class="success-message" id="successMessage"></div>
+            <div class="error-message" id="errorMessage"></div>
+        </form>
+    </div>
+
+    <script>
+        async function auth() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const successMessage = document.getElementById("successMessage");
+            const errorMessage = document.getElementById("errorMessage");
+            const loginButton = document.querySelector("button");
+
+            // Disable the login button during processing
+            loginButton.disabled = true;
+            loginButton.textContent = "Logging in...";
+
+            try {
+                if (username === "admin@gmail.com" && password === "user") {
+                    successMessage.style.display = "block";
+                    errorMessage.style.display = "none";
+                    setTimeout(() => {
+                        window.location.href = "./home.html";
+                    }, 2000);
+                } else {
+                    throw new Error("Invalid credentials");
+                }
+            } catch (error) {
+                errorMessage.style.display = "block";
+                successMessage.style.display = "none";
+            } finally {
+                // Re-enable the login button
+                loginButton.disabled = false;
+                loginButton.textContent = "Login";
+            }
+        }
+
+        document.getElementById("contactForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            auth();
+        });
+    </script>
+</body>
+</html>

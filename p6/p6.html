@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Results Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        @keyframes fillCircle {
+            from {
+                stroke-dashoffset: 100;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .circle {
+            transition: stroke-dashoffset 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white font-sans min-h-screen flex flex-col items-center">
+    <!-- Header Section -->
+    <header class="w-full text-center py-6 bg-teal-600 shadow-lg">
+        <h1 class="text-4xl font-bold uppercase tracking-wide">Results Dashboard</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="flex flex-col md:flex-row mt-8 w-11/12 max-w-screen-lg rounded-lg shadow-lg bg-white text-black">
+        <!-- Sidebar -->
+        <aside class="bg-teal-600 text-white w-full md:w-1/4 p-6 flex flex-col items-center md:items-start space-y-6">
+            <button class="bg-green-500 hover:bg-green-400 text-white rounded-full p-3">
+                <i class="fas fa-arrow-left text-2xl"></i>
+            </button>
+            <h2 class="text-2xl font-bold">Results</h2>
+        </aside>
+
+        <!-- Main Section -->
+        <main class="flex-1 p-6 space-y-8">
+            <!-- Score Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="text-center bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Quiz Score</h3>
+                    <div class="relative w-36 h-36 mx-auto">
+                        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#e5e7eb" stroke-width="2" />
+                            <path class="circle quiz-circle" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#3b82f6" stroke-width="2"
+                                stroke-dasharray="100, 100" stroke-dashoffset="100" />
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold quiz-text">
+                            0%
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4">Attention Score</h3>
+                    <div class="relative w-36 h-36 mx-auto">
+                        <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#e5e7eb" stroke-width="2" />
+                            <path class="circle attention-circle" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#10b981" stroke-width="2"
+                                stroke-dasharray="100, 100" stroke-dashoffset="100" />
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold attention-text">
+                            0%
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rating Section -->
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-bold mb-4">Rate Your Experience</h3>
+                <div class="flex justify-center space-x-2">
+                    <button class="bg-red-500 hover:bg-red-400 w-12 h-12 flex items-center justify-center text-2xl font-bold rounded-full rating-btn"
+                        data-rating="1">1</button>
+                    <button class="bg-red-400 hover:bg-orange-400 w-12 h-12 flex items-center justify-center text-2xl font-bold rounded-full rating-btn"
+                        data-rating="2">2</button>
+                    <button class="bg-orange-500 hover:bg-yellow-400 w-12 h-12 flex items-center justify-center text-2xl font-bold rounded-full rating-btn"
+                        data-rating="3">3</button>
+                    <button class="bg-green-500 hover:bg-green-400 w-12 h-12 flex items-center justify-center text-2xl font-bold rounded-full rating-btn"
+                        data-rating="4">4</button>
+                    <button class="bg-green-600 hover:bg-green-500 w-12 h-12 flex items-center justify-center text-2xl font-bold rounded-full rating-btn"
+                        data-rating="5">5</button>
+                </div>
+                <p class="text-xl font-semibold mt-4">Your Rating: <span class="rating-display">None</span></p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animate Quiz Score
+            const quizScoreElement = document.querySelector('.quiz-circle');
+            const quizScoreText = document.querySelector('.quiz-text');
+            const quizScore = 75; // Example score
+            animateCircle(quizScoreElement, quizScoreText, quizScore);
+
+            // Animate Attention Score
+            const attentionScoreElement = document.querySelector('.attention-circle');
+            const attentionScoreText = document.querySelector('.attention-text');
+            const attentionScore = 50; // Example score
+            animateCircle(attentionScoreElement, attentionScoreText, attentionScore);
+
+            // Rating Buttons
+            const ratingButtons = document.querySelectorAll('.rating-btn');
+            const ratingDisplay = document.querySelector('.rating-display');
+            ratingButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const rating = this.getAttribute('data-rating');
+                    ratingDisplay.textContent = rating;
+                });
+            });
+        });
+
+        function animateCircle(element, textElement, score) {
+            const radius = 15.9155;
+            const circumference = 2 * Math.PI * radius;
+            const offset = circumference - (score / 100) * circumference;
+
+            element.style.strokeDasharray = `${circumference} ${circumference}`;
+            element.style.strokeDashoffset = circumference;
+
+            setTimeout(() => {
+                element.style.transition = 'stroke-dashoffset 1.5s ease-in-out';
+                element.style.strokeDashoffset = offset;
+                let currentScore = 0;
+                const interval = setInterval(() => {
+                    if (currentScore < score) {
+                        currentScore++;
+                        textElement.textContent = `${currentScore}%`;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 10);
+            }, 500);
+        }
+    </script>
+</body>
+
+</html>

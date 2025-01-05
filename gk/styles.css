@@ -1,0 +1,101 @@
+/* Basic Styling for the page */
+
+body {
+    background-color: #86af49; /* Tailwind bg-red-300 */
+}
+
+.bg-gray-300 {
+    background-color: #e3eaa7; /* Tailwind bg-gray-300 */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-xl {
+    font-size: 1.25rem; /* Tailwind text-xl */
+}
+
+.font-bold {
+    font-weight: 700; /* Tailwind font-bold */
+}
+
+.mb-4 {
+    margin-bottom: 1rem; /* Tailwind mb-4 */
+}
+
+.list-inside {
+    list-style-position: inside; /* Tailwind list-inside */
+}
+
+.list-disc {
+    list-style-type: disc; /* Tailwind list-disc */
+}
+
+.bg-green-500 {
+    background-color: #10B981; /* Tailwind bg-green-500 */
+}
+
+.bg-gray-500 {
+    background-color: #6B7280; /* Tailwind bg-gray-500 */
+}
+
+.text-white {
+    color: white; /* Tailwind text-white */
+}
+
+.p-2 {
+    padding: 0.5rem; /* Tailwind p-2 */
+}
+
+.rounded-full {
+    border-radius: 9999px; /* Tailwind rounded-full */
+}
+
+.absolute {
+    position: absolute; /* Tailwind absolute */
+}
+
+.bottom-4 {
+    bottom: 1rem; /* Tailwind bottom-4 */
+}
+
+.left-4 {
+    left: 1rem; /* Tailwind left-4 */
+}
+
+.right-4 {
+    right: 1rem; /* Tailwind right-4 */
+}
+
+.right-12 {
+    right: 3rem; /* Tailwind right-12 */
+}
+
+.right-20 {
+    right: 5rem; /* Tailwind right-20 */
+}
+
+.w-11/12 {
+    width: 91.666667%; /* Tailwind w-11/12 */
+}
+
+.md\:w-2\/3 {
+    width: 66.666667%; /* Tailwind md:w-2/3 */
+}
+
+.lg\:w-1\/2 {
+    width: 50%; /* Tailwind lg:w-1/2 */
+}
+
+.border-2 {
+    border-width: 2px; /* Tailwind border-2 */
+}
+
+.border-blue-500 {
+    border-color: #3B82F6; /* Tailwind border-blue-500 */
+}
+
+.p-6 {
+    padding: 1.5rem; /* Tailwind p-6 */
+}
